@@ -29,6 +29,13 @@ CACHE_PIXELS = 40_000_000    # rendered-image cache budget (~160 MB)
 DLIST_CACHE = 48             # parsed pages kept around for fast re-rendering
 FRAME_BUDGET = 0.012         # seconds of rendering per UI tick
 WHEEL_STEP = 100             # px scrolled per wheel notch
+# File types MuPDF opens, grouped for the Open dialog (the first group is the default filter).
+FILE_GROUPS = [
+    ("PDF files", "pdf"),
+    ("E-books and documents", "epub mobi fb2 xps oxps cbz"),
+    ("Images", "png jpg jpeg bmp gif tif tiff jp2 jpx jxr pnm pbm pgm ppm pam psd svg"),
+    ("Text and HTML", "txt html htm xhtml"),
+]
 CONFIG = os.path.join(os.environ.get("APPDATA", os.path.expanduser("~")), APP, "config.json")
 
 
@@ -196,10 +203,10 @@ class Reader:
 
     # ------------------------------------------------------------ files
     def open_dialog(self):
+        groups = [(name, " ".join(f"*.{ext}" for ext in exts.split())) for name, exts in FILE_GROUPS]
         path = filedialog.askopenfilename(
             parent=self.root, initialdir=self.cfg.get("last_dir") or None,
-            filetypes=[("PDF files", "*.pdf"),
-                       ("All documents", "*.pdf *.xps *.oxps *.epub *.cbz *.fb2 *.mobi"),
+            filetypes=[("All supported files", " ".join(p for _, p in groups)), *groups,
                        ("All files", "*.*")])
         if path:
             self.open(path)

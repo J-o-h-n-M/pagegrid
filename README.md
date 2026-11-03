@@ -49,7 +49,9 @@ Run `PageGrid.exe`, or `PageGrid.exe file.pdf`. You can put the exe anywhere. To
 | Print (printer, pages, copies) | Ctrl + P, *Print* |
 | Full screen | F11 (Esc to leave) |
 
-It also opens XPS, EPUB, CBZ and FB2 files. Your pages-per-row setting and window size are saved
+Besides PDF it opens e-books and documents (EPUB, MOBI, FB2, XPS, CBZ comics), images
+(PNG, JPEG, BMP, GIF, TIFF, JPEG 2000, SVG and more), plain text and HTML. The Open dialog
+shows all of these by default; use its file type list to narrow it down. Your pages-per-row setting and window size are saved
 in `%APPDATA%\PageGrid\config.json`.
 
 ## Build
