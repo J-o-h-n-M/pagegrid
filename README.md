@@ -3,6 +3,24 @@
 A small, fast PDF reader for Windows (Python + MuPDF + Tk). It shows pages in a grid,
 and **Ctrl + mouse wheel** changes how many pages fit on each row.
 
+![Ctrl + mouse wheel changes the number of pages per row](docs/zoom.gif)
+
+## Screenshots
+
+Six pages per row:
+
+![Six pages per row](docs/grid.png)
+
+Three pages per row, for reading:
+
+![Three pages per row](docs/reading.png)
+
+The whole 37-page document at ten pages per row:
+
+![Ten pages per row](docs/overview.png)
+
+<sub>The document in the screenshots was generated for this README.</sub>
+
 ## Use
 
 Build it (see below) and run `dist\PageGrid.exe`, or `PageGrid.exe file.pdf`. The exe is one
