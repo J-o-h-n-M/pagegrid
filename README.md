@@ -5,6 +5,15 @@ and **Ctrl + mouse wheel** changes how many pages fit on each row.
 
 ![Ctrl + mouse wheel changes the number of pages per row](docs/zoom.gif)
 
+## Download
+
+Download **[PageGrid.exe](https://github.com/J-o-h-n-M/pagegrid/releases/latest/download/PageGrid.exe)**
+from the [latest release](https://github.com/J-o-h-n-M/pagegrid/releases/latest). It is a single
+file for 64-bit Windows 10 and 11, with nothing to install.
+
+The exe is not code-signed, so the first time you run it Windows SmartScreen shows
+"Windows protected your PC". Click **More info → Run anyway** to start it.
+
 ## Screenshots
 
 Six pages per row:
@@ -23,8 +32,7 @@ The whole 37-page document at ten pages per row:
 
 ## Use
 
-Build it (see below) and run `dist\PageGrid.exe`, or `PageGrid.exe file.pdf`. The exe is one
-self-contained file you can copy anywhere. To make it your default PDF viewer, right-click a PDF →
+Run `PageGrid.exe`, or `PageGrid.exe file.pdf`. You can put the exe anywhere. To make it your default PDF viewer, right-click a PDF →
 *Open with* → *Choose another app* → browse to `PageGrid.exe`.
 
 | Action | Input |
@@ -59,5 +67,6 @@ The PageGrid source code in this repository is released under the [MIT License](
 
 PageGrid uses [PyMuPDF](https://github.com/pymupdf/PyMuPDF) and the MuPDF library, which are
 licensed under the [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html) (or a commercial
-license from Artifex). The built `PageGrid.exe` contains them, so if you distribute the exe,
-the AGPL-3.0 terms apply to that build, including making its source code available.
+license from Artifex). The released `PageGrid.exe` contains them, so each exe build as a whole
+is distributed under the [AGPL-3.0](licenses/AGPL-3.0.txt). Its complete source is this
+repository plus the component sources listed in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
